@@ -1,0 +1,788 @@
+import React, { useState } from 'react';
+import { CheckCircle, AlertTriangle, Clock, Download, Terminal, Bot, Shield, Play, Pause, Settings, GitBranch, Zap, Users, FileText, Eye } from 'lucide-react';
+
+const PatchRecommendations = () => {
+  const [selectedRecommendation, setSelectedRecommendation] = useState(null);
+  const [filterStatus, setFilterStatus] = useState('all');
+  const [deploymentStatus, setDeploymentStatus] = useState({});
+  const [showDeploymentModal, setShowDeploymentModal] = useState(false);
+  const [selectedDeployment, setSelectedDeployment] = useState(null);
+
+  const recommendations = [
+    {
+      id: 'PATCH-2024-001',
+      cveId: 'CVE-2024-0001',
+      title: 'Apache HTTP Server Critical Update',
+      severity: 'Critical',
+      affectedSystems: ['web-server-01', 'web-server-02', 'web-server-03'],
+      patchType: 'Package Update',
+      confidenceScore: 95,
+      estimatedDowntime: '5 minutes',
+      rollbackAvailable: true,
+      priority: 1,
+      status: 'pending',
+      
+      // Enhanced Command Information
+      commands: {
+        ubuntu: [
+          'sudo apt update',
+          'sudo apt install apache2=2.4.59-1ubuntu4.3',
+          'sudo systemctl restart apache2',
+          'sudo systemctl status apache2'
+        ],
+        centos: [
+          'sudo yum update httpd',
+          'sudo systemctl restart httpd',
+          'sudo systemctl status httpd'
+        ],
+        windows: [
+          'Stop-Service -Name "Apache2.4"',
+          'Install-Package -Name "Apache-2.4.59"',
+          'Start-Service -Name "Apache2.4"',
+          'Get-Service -Name "Apache2.4"'
+        ]
+      },
+      
+      // Vendor Information
+      vendorInfo: {
+        vendor: 'Apache Software Foundation',
+        patchVersion: '2.4.59',
+        releaseDate: '2024-01-15',
+        patchNotes: 'https://httpd.apache.org/security/vulnerabilities_24.html',
+        downloadUrl: 'https://httpd.apache.org/download.cgi'
+      },
+      
+      preRequisites: [
+        'Create backup of current configuration',
+        'Schedule maintenance window',
+        'Notify stakeholders of planned downtime',
+        'Verify system compatibility'
+      ],
+      
+      verificationSteps: [
+        'Check Apache version: apache2 -v',
+        'Verify configuration syntax: apache2ctl configtest',
+        'Test web application functionality',
+        'Monitor error logs for issues',
+        'Perform security scan to confirm patch'
+      ],
+      
+      llmExplanation: 'This update addresses a critical remote code execution vulnerability. The patch is straightforward with minimal risk. Apache configuration files remain unchanged, reducing complexity.',
+      riskAssessment: 'Low risk - Standard package update with automatic rollback capability. No configuration changes required.',
+      businessImpact: 'Minimal - Brief service interruption during restart. Critical security improvement outweighs downtime.',
+      
+      alternativeApproaches: [
+        {
+          approach: 'Blue-green deployment',
+          description: 'Deploy to secondary environment first, then switch traffic',
+          complexity: 'High',
+          downtime: '0 minutes',
+          cost: 'High'
+        },
+        {
+          approach: 'Rolling update',
+          description: 'Update servers one by one behind load balancer',
+          complexity: 'Medium',
+          downtime: '0 minutes',
+          cost: 'Medium'
+        },
+        {
+          approach: 'Temporary WAF rules',
+          description: 'Implement firewall rules as temporary mitigation',
+          complexity: 'Low',
+          downtime: '0 minutes',
+          cost: 'Low'
+        }
+      ],
+      
+      // Workaround if patch not available
+      workarounds: [
+        {
+          title: 'Web Application Firewall Rules',
+          description: 'Implement WAF rules to block malicious requests',
+          commands: [
+            'sudo ufw deny from suspicious_ip',
+            'sudo iptables -A INPUT -s malicious_pattern -j DROP'
+          ],
+          effectiveness: 85,
+          temporaryFix: true
+        },
+        {
+          title: 'Network Segmentation',
+          description: 'Isolate affected systems from public network',
+          commands: [
+            'sudo iptables -A INPUT -i eth0 -p tcp --dport 80 -j DROP',
+            'sudo iptables -A INPUT -s trusted_network -j ACCEPT'
+          ],
+          effectiveness: 90,
+          temporaryFix: true
+        }
+      ],
+      
+      deploymentOptions: {
+        immediate: {
+          label: 'Immediate Deployment',
+          description: 'Deploy patch immediately to all systems',
+          risk: 'Medium',
+          timeline: '30 minutes'
+        },
+        staged: {
+          label: 'Staged Deployment',
+          description: 'Deploy to test environment first, then production',
+          risk: 'Low',
+          timeline: '4 hours'
+        },
+        scheduled: {
+          label: 'Scheduled Maintenance',
+          description: 'Deploy during next maintenance window',
+          risk: 'Low',
+          timeline: '3 days'
+        }
+      }
+    },
+    {
+      id: 'PATCH-2024-002',
+      cveId: 'CVE-2024-0002',
+      title: 'OpenSSL Buffer Overflow Security Update',
+      severity: 'High',
+      affectedSystems: ['db-server-01', 'app-server-01', 'app-server-02'],
+      patchType: 'Library Update',
+      confidenceScore: 87,
+      estimatedDowntime: '10 minutes',
+      rollbackAvailable: true,
+      priority: 2,
+      status: 'pending',
+      
+      commands: {
+        ubuntu: [
+          'sudo apt update',
+          'sudo apt install openssl=3.0.13-1',
+          'sudo systemctl restart nginx',
+          'sudo systemctl restart postgresql'
+        ],
+        centos: [
+          'sudo yum update openssl',
+          'sudo systemctl restart nginx',
+          'sudo systemctl restart postgresql'
+        ]
+      },
+      
+      vendorInfo: {
+        vendor: 'OpenSSL Project',
+        patchVersion: '3.0.13',
+        releaseDate: '2024-01-12',
+        patchNotes: 'https://www.openssl.org/news/secadv/20240112.txt',
+        downloadUrl: 'https://www.openssl.org/source/'
+      },
+      
+      preRequisites: [
+        'Test SSL certificate compatibility',
+        'Backup current SSL configuration',
+        'Coordinate with database team'
+      ],
+      
+      verificationSteps: [
+        'Check OpenSSL version: openssl version',
+        'Test SSL connections: openssl s_client -connect localhost:443',
+        'Verify certificate chain',
+        'Test application SSL functionality'
+      ],
+      
+      llmExplanation: 'OpenSSL library update requires restart of all services using SSL/TLS. Impact is moderate but necessary for security.',
+      riskAssessment: 'Medium risk - Requires service restarts. Potential for SSL certificate issues.',
+      businessImpact: 'Medium - Brief interruption of secure services. Database connections may be affected.',
+      
+      alternativeApproaches: [
+        {
+          approach: 'Service-by-service update',
+          description: 'Update and restart services individually',
+          complexity: 'Medium',
+          downtime: '5 minutes per service',
+          cost: 'Low'
+        }
+      ],
+      
+      workarounds: [
+        {
+          title: 'Network Access Control',
+          description: 'Restrict access to SSL services from untrusted networks',
+          commands: [
+            'sudo iptables -A INPUT -p tcp --dport 443 -s trusted_network -j ACCEPT',
+            'sudo iptables -A INPUT -p tcp --dport 443 -j DROP'
+          ],
+          effectiveness: 70,
+          temporaryFix: true
+        }
+      ],
+      
+      deploymentOptions: {
+        immediate: {
+          label: 'Immediate Deployment',
+          description: 'Deploy patch immediately',
+          risk: 'Medium',
+          timeline: '45 minutes'
+        },
+        staged: {
+          label: 'Staged Deployment',
+          description: 'Deploy to non-production first',
+          risk: 'Low',
+          timeline: '2 hours'
+        },
+        scheduled: {
+          label: 'Scheduled Maintenance',
+          description: 'Deploy during maintenance window',
+          risk: 'Low',
+          timeline: '2 days'
+        }
+      }
+    },
+    {
+      id: 'PATCH-2024-003',
+      cveId: 'CVE-2024-0003',
+      title: 'Linux Kernel Security Patch',
+      severity: 'High',
+      affectedSystems: ['all-linux-servers'],
+      patchType: 'Kernel Update',
+      confidenceScore: 92,
+      estimatedDowntime: '15 minutes',
+      rollbackAvailable: false,
+      priority: 3,
+      status: 'testing',
+      
+      commands: {
+        ubuntu: [
+          'sudo apt update',
+          'sudo apt install linux-image-generic linux-headers-generic',
+          'sudo reboot'
+        ],
+        centos: [
+          'sudo yum update kernel',
+          'sudo reboot'
+        ]
+      },
+      
+      vendorInfo: {
+        vendor: 'Linux Kernel Team',
+        patchVersion: '5.15.0-91',
+        releaseDate: '2024-01-10',
+        patchNotes: 'https://kernel.org/security/',
+        downloadUrl: 'https://kernel.org'
+      },
+      
+      preRequisites: [
+        'Schedule system reboot',
+        'Notify all users of downtime',
+        'Verify boot configuration',
+        'Create system backup'
+      ],
+      
+      verificationSteps: [
+        'Check kernel version: uname -r',
+        'Verify all services started correctly',
+        'Check system logs for errors',
+        'Validate application functionality'
+      ],
+      
+      llmExplanation: 'Kernel updates require system reboot and carry higher risk. However, this patch addresses a privilege escalation vulnerability.',
+      riskAssessment: 'High risk - Requires reboot. Potential for boot failures or driver issues.',
+      businessImpact: 'High - System downtime required. All services will be interrupted.',
+      
+      alternativeApproaches: [
+        {
+          approach: 'Live patching',
+          description: 'Use kernel live patching if available',
+          complexity: 'High',
+          downtime: '0 minutes',
+          cost: 'High'
+        }
+      ],
+      
+      workarounds: [
+        {
+          title: 'Access Control Hardening',
+          description: 'Implement strict access controls to limit privilege escalation',
+          commands: [
+            'sudo chmod 750 /usr/bin/sudo',
+            'sudo usermod -G restricted_group username'
+          ],
+          effectiveness: 60,
+          temporaryFix: true
+        }
+      ],
+      
+      deploymentOptions: {
+        immediate: {
+          label: 'Emergency Deployment',
+          description: 'Deploy immediately if actively exploited',
+          risk: 'High',
+          timeline: '1 hour'
+        },
+        staged: {
+          label: 'Staged Deployment',
+          description: 'Deploy to test systems first',
+          risk: 'Medium',
+          timeline: '6 hours'
+        },
+        scheduled: {
+          label: 'Scheduled Maintenance',
+          description: 'Deploy during planned maintenance',
+          risk: 'Low',
+          timeline: '1 week'
+        }
+      }
+    }
+  ];
+
+  const handleDeployPatch = (patchId, deploymentType) => {
+    setDeploymentStatus(prev => ({
+      ...prev,
+      [patchId]: 'deploying'
+    }));
+    
+    // Simulate deployment
+    setTimeout(() => {
+      setDeploymentStatus(prev => ({
+        ...prev,
+        [patchId]: 'completed'
+      }));
+      
+      // Update recommendation status
+      const updatedRecommendations = recommendations.map(rec => 
+        rec.id === patchId ? { ...rec, status: 'deployed' } : rec
+      );
+    }, 3000);
+  };
+
+  const getSeverityColor = (severity) => {
+    switch (severity.toLowerCase()) {
+      case 'critical':
+        return 'text-red-400 bg-red-900/20';
+      case 'high':
+        return 'text-amber-400 bg-amber-900/20';
+      case 'medium':
+        return 'text-yellow-400 bg-yellow-900/20';
+      case 'low':
+        return 'text-green-400 bg-green-900/20';
+      default:
+        return 'text-gray-400 bg-gray-900/20';
+    }
+  };
+
+  const getStatusColor = (status) => {
+    switch (status.toLowerCase()) {
+      case 'pending':
+        return 'text-yellow-400 bg-yellow-900/20';
+      case 'testing':
+        return 'text-blue-400 bg-blue-900/20';
+      case 'deployed':
+        return 'text-green-400 bg-green-900/20';
+      case 'failed':
+        return 'text-red-400 bg-red-900/20';
+      default:
+        return 'text-gray-400 bg-gray-900/20';
+    }
+  };
+
+  const getPriorityColor = (priority) => {
+    switch (priority) {
+      case 1:
+        return 'bg-red-600';
+      case 2:
+        return 'bg-amber-600';
+      case 3:
+        return 'bg-yellow-600';
+      default:
+        return 'bg-green-600';
+    }
+  };
+
+  const filteredRecommendations = recommendations.filter(rec => 
+    filterStatus === 'all' || rec.status === filterStatus
+  );
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-3xl font-bold text-white mb-2">Patch Recommendations</h2>
+          <p className="text-gray-400">AI-powered patch recommendations with automated deployment</p>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 text-sm text-gray-400">
+            <Bot className="w-4 h-4" />
+            <span>LLM-Enhanced Analysis</span>
+          </div>
+          <select
+            value={filterStatus}
+            onChange={(e) => setFilterStatus(e.target.value)}
+            className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm"
+          >
+            <option value="all">All Status</option>
+            <option value="pending">Pending</option>
+            <option value="testing">Testing</option>
+            <option value="deployed">Deployed</option>
+          </select>
+          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors">
+            Refresh Recommendations
+          </button>
+        </div>
+      </div>
+
+      {/* Summary Stats */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-2xl font-bold text-white">{recommendations.filter(r => r.status === 'pending').length}</p>
+              <p className="text-sm text-gray-400">Pending Patches</p>
+            </div>
+            <Clock className="w-8 h-8 text-yellow-400" />
+          </div>
+        </div>
+        <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-2xl font-bold text-white">{recommendations.filter(r => r.severity === 'Critical').length}</p>
+              <p className="text-sm text-gray-400">Critical Patches</p>
+            </div>
+            <AlertTriangle className="w-8 h-8 text-red-400" />
+          </div>
+        </div>
+        <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-2xl font-bold text-white">{recommendations.filter(r => r.status === 'deployed').length}</p>
+              <p className="text-sm text-gray-400">Deployed Patches</p>
+            </div>
+            <CheckCircle className="w-8 h-8 text-green-400" />
+          </div>
+        </div>
+        <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-2xl font-bold text-white">{Math.round(recommendations.reduce((acc, rec) => acc + rec.confidenceScore, 0) / recommendations.length)}%</p>
+              <p className="text-sm text-gray-400">Avg Confidence</p>
+            </div>
+            <Bot className="w-8 h-8 text-blue-400" />
+          </div>
+        </div>
+      </div>
+
+      {/* Recommendations List */}
+      <div className="space-y-4">
+        {filteredRecommendations.map((rec) => (
+          <div key={rec.id} className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <span className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${getPriorityColor(rec.priority)}`}>
+                      {rec.priority}
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{rec.title}</h3>
+                      <div className="flex items-center space-x-2 mt-1">
+                        <span className="text-blue-400 text-sm font-mono">{rec.cveId}</span>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(rec.severity)}`}>
+                          {rec.severity}
+                        </span>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusColor(rec.status)}`}>
+                          {rec.status}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 text-sm">
+                    <div>
+                      <span className="text-gray-400">Affected Systems:</span>
+                      <span className="text-white ml-2">{rec.affectedSystems.length}</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Confidence:</span>
+                      <span className="text-white ml-2">{rec.confidenceScore}%</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Downtime:</span>
+                      <span className="text-white ml-2">{rec.estimatedDowntime}</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Rollback:</span>
+                      <span className={rec.rollbackAvailable ? 'text-green-400' : 'text-red-400'}>
+                        {rec.rollbackAvailable ? 'Available' : 'Not Available'}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-700/30 p-4 rounded-lg mb-4">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Bot className="w-4 h-4 text-blue-400" />
+                      <span className="text-sm font-medium text-blue-400">LLM Analysis</span>
+                    </div>
+                    <p className="text-sm text-gray-300">{rec.llmExplanation}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={() => setSelectedRecommendation(rec)}
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors"
+                  >
+                    View Details
+                  </button>
+                  <button
+                    onClick={() => {
+                      setSelectedDeployment(rec);
+                      setShowDeploymentModal(true);
+                    }}
+                    disabled={rec.status === 'deployed' || deploymentStatus[rec.id] === 'deploying'}
+                    className="px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-600 rounded-lg text-white text-sm font-medium transition-colors flex items-center space-x-2"
+                  >
+                    {deploymentStatus[rec.id] === 'deploying' ? (
+                      <>
+                        <Settings className="w-4 h-4 animate-spin" />
+                        <span>Deploying...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Play className="w-4 h-4" />
+                        <span>Deploy</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Detailed View Modal */}
+      {selectedRecommendation && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-gray-800 rounded-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6 border-b border-gray-700">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-white">{selectedRecommendation.title}</h3>
+                  <div className="flex items-center space-x-3 mt-2">
+                    <span className="text-blue-400 font-mono">{selectedRecommendation.cveId}</span>
+                    <span className={`px-3 py-1 rounded text-sm font-medium ${getSeverityColor(selectedRecommendation.severity)}`}>
+                      {selectedRecommendation.severity}
+                    </span>
+                    <span className="text-gray-400">Confidence: {selectedRecommendation.confidenceScore}%</span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedRecommendation(null)}
+                  className="text-gray-400 hover:text-white text-xl"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            
+            <div className="p-6 space-y-6">
+              {/* Risk Assessment */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-700/30 p-4 rounded-lg">
+                  <h4 className="text-lg font-semibold text-white mb-3">Risk Assessment</h4>
+                  <p className="text-gray-300 text-sm">{selectedRecommendation.riskAssessment}</p>
+                </div>
+                <div className="bg-gray-700/30 p-4 rounded-lg">
+                  <h4 className="text-lg font-semibold text-white mb-3">Business Impact</h4>
+                  <p className="text-gray-300 text-sm">{selectedRecommendation.businessImpact}</p>
+                </div>
+              </div>
+
+              {/* Deployment Commands */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Deployment Commands</h4>
+                <div className="space-y-4">
+                  {Object.entries(selectedRecommendation.commands).map(([os, commands]) => (
+                    <div key={os} className="bg-gray-700/30 p-4 rounded-lg">
+                      <h5 className="text-white font-medium mb-2 capitalize">{os}</h5>
+                      <div className="bg-gray-900 p-3 rounded font-mono text-sm">
+                        {commands.map((cmd, index) => (
+                          <div key={index} className="text-green-400 mb-1">
+                            <span className="text-gray-500">$ </span>
+                            {cmd}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Prerequisites */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Prerequisites</h4>
+                <div className="space-y-2">
+                  {selectedRecommendation.preRequisites.map((req, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span className="text-gray-300">{req}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Verification Steps */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Verification Steps</h4>
+                <div className="space-y-2">
+                  {selectedRecommendation.verificationSteps.map((step, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white text-xs rounded-full flex items-center justify-center">
+                        {index + 1}
+                      </span>
+                      <span className="text-gray-300">{step}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Alternative Approaches */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Alternative Approaches</h4>
+                <div className="space-y-3">
+                  {selectedRecommendation.alternativeApproaches.map((approach, index) => (
+                    <div key={index} className="bg-gray-700/30 p-4 rounded-lg">
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="text-white font-medium">{approach.approach}</h5>
+                        <div className="flex items-center space-x-2 text-xs">
+                          <span className="text-gray-400">Complexity:</span>
+                          <span className="text-white">{approach.complexity}</span>
+                          <span className="text-gray-400">Downtime:</span>
+                          <span className="text-white">{approach.downtime}</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-300 text-sm">{approach.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Workarounds */}
+              {selectedRecommendation.workarounds && (
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Temporary Workarounds</h4>
+                  <div className="space-y-3">
+                    {selectedRecommendation.workarounds.map((workaround, index) => (
+                      <div key={index} className="bg-gray-700/30 p-4 rounded-lg border border-amber-600/20">
+                        <div className="flex items-center justify-between mb-2">
+                          <h5 className="text-white font-medium">{workaround.title}</h5>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-xs text-amber-400">Effectiveness: {workaround.effectiveness}%</span>
+                            {workaround.temporaryFix && (
+                              <span className="text-xs bg-amber-900/20 text-amber-400 px-2 py-1 rounded">
+                                Temporary
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        <p className="text-gray-300 text-sm mb-3">{workaround.description}</p>
+                        <div className="bg-gray-900 p-3 rounded font-mono text-sm">
+                          {workaround.commands.map((cmd, cmdIndex) => (
+                            <div key={cmdIndex} className="text-amber-400 mb-1">
+                              <span className="text-gray-500">$ </span>
+                              {cmd}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Vendor Information */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Vendor Information</h4>
+                <div className="bg-gray-700/30 p-4 rounded-lg">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <span className="text-gray-400">Vendor:</span>
+                      <span className="text-white ml-2">{selectedRecommendation.vendorInfo.vendor}</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Patch Version:</span>
+                      <span className="text-white ml-2">{selectedRecommendation.vendorInfo.patchVersion}</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Release Date:</span>
+                      <span className="text-white ml-2">{selectedRecommendation.vendorInfo.releaseDate}</span>
+                    </div>
+                    <div>
+                      <a 
+                        href={selectedRecommendation.vendorInfo.patchNotes}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 text-sm"
+                      >
+                        View Patch Notes →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Deployment Modal */}
+      {showDeploymentModal && selectedDeployment && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-gray-800 rounded-xl max-w-2xl w-full">
+            <div className="p-6 border-b border-gray-700">
+              <div className="flex items-center justify-between">
+                <h3 className="text-xl font-bold text-white">Deploy Patch: {selectedDeployment.title}</h3>
+                <button
+                  onClick={() => setShowDeploymentModal(false)}
+                  className="text-gray-400 hover:text-white text-xl"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            
+            <div className="p-6 space-y-4">
+              <p className="text-gray-300">Choose your deployment strategy:</p>
+              
+              <div className="space-y-3">
+                {Object.entries(selectedDeployment.deploymentOptions).map(([key, option]) => (
+                  <div key={key} className="bg-gray-700/30 p-4 rounded-lg border border-gray-600 hover:border-gray-500 cursor-pointer transition-colors">
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1">
+                        <h4 className="text-white font-medium">{option.label}</h4>
+                        <p className="text-gray-300 text-sm mt-1">{option.description}</p>
+                        <div className="flex items-center space-x-4 mt-2 text-xs">
+                          <span className="text-gray-400">Risk: <span className="text-white">{option.risk}</span></span>
+                          <span className="text-gray-400">Timeline: <span className="text-white">{option.timeline}</span></span>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => {
+                          handleDeployPatch(selectedDeployment.id, key);
+                          setShowDeploymentModal(false);
+                        }}
+                        className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white text-sm font-medium transition-colors"
+                      >
+                        Deploy
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default PatchRecommendations;
