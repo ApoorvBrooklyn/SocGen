@@ -18,7 +18,7 @@ class LLMService:
     """LLM service using Groq API"""
     def __init__(self):
         self.model_name = settings.GROQ_MODEL
-        self.api_key = "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"
+        self.api_key = "" ## Upload your own API key here
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
         if not self.api_key:
             raise RuntimeError("GROQ_API_KEY not configured in settings. Please set it in your .env file.")

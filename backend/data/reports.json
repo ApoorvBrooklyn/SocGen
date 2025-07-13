@@ -574,5 +574,190 @@
     "generated_at": "2025-07-13T16:52:41.000078",
     "created_at": "2025-07-13T16:52:41.000405",
     "updated_at": "2025-07-13T16:52:41.000405"
+  },
+  {
+    "id": "report-14",
+    "type": "technical",
+    "format": "json",
+    "summary": "Here is a concise executive summary based on the report data:\n\n**Executive Summary**\n\nThis technical security report highlights the results of a vulnerability assessment conducted between July 6, 2025, and July 13, 2025. The key findings are:\n\n* A total of 8 vulnerabilities were identified, with 1 critical, 1 high, 1 medium, and 1 low severity rating.\n* The overall risk score is 51, indicating a moderate level of risk.\n* A total of 28 Common Vulnerabilities and Exposures (CVEs) were detected.\n\n**Recommendations**\n\nBased on these findings, we strongly recommend that immediate attention be given to remediating the critical and high-severity vulnerabilities to prevent potential security breaches. Additionally, we suggest prioritizing the medium and low-severity vulnerabilities for remediation to further reduce the risk score. Regular vulnerability assessments and remediation efforts are crucial to maintaining a secure environment.\n\nNote: This summary is concise and focuses on the key findings and recommendations, making it suitable for an executive audience.",
+    "content": {
+      "title": "Technical Security Report",
+      "summary": "## Technical Security Analysis\n\n### Vulnerability Analysis\n**Total Vulnerabilities:** 8\n**Average CVSS Score:** 6.0\n\n### Top Vulnerabilities\n- CVE-2024-9001: CVSS 9.7 - Simulated Vulnerability e24aee27\n- CVE-2024-9208: CVSS 9.4 - Simulated Vulnerability 8cde718b\n- CVE-2024-6450: CVSS 8.4 - Simulated Vulnerability 3a14312e\n- CVE-2024-8736: CVSS 7.9 - Simulated Vulnerability 407ba4bf\n- CVE-2024-4902: CVSS 4.5 - Simulated Vulnerability ace61aba\n- CVE-2024-9830: CVSS 3.4 - Simulated Vulnerability bc8da259\n- CVE-2024-2324: CVSS 2.8 - Simulated Vulnerability 40f9258d\n- CVE-2024-1967: CVSS 1.9 - Simulated Vulnerability 7bef24fb\n\n### Asset Inventory\n**Total Assets:** 0\n**Asset Distribution:**\n\n\n### Technical Recommendations\n1. Implement automated vulnerability scanning\n2. Establish patch management process\n3. Configure security monitoring tools\n4. Review network segmentation\n5. Implement access controls",
+      "details": {
+        "top_vulnerabilities": [
+          {
+            "id": "CVE-2024-9001",
+            "title": "Simulated Vulnerability e24aee27",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "critical",
+            "cvss_score": "9.7",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": true,
+            "patch_available": true,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:35:37.054205",
+            "updated_at": "2025-07-13T16:35:37.054205"
+          },
+          {
+            "id": "CVE-2024-9208",
+            "title": "Simulated Vulnerability 8cde718b",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "mixed",
+            "cvss_score": "9.4",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": false,
+            "patch_available": true,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:39:57.771121",
+            "updated_at": "2025-07-13T16:39:57.771121"
+          },
+          {
+            "id": "CVE-2024-6450",
+            "title": "Simulated Vulnerability 3a14312e",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "high",
+            "cvss_score": "8.4",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": false,
+            "patch_available": false,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:35:41.949580",
+            "updated_at": "2025-07-13T16:35:41.949580"
+          },
+          {
+            "id": "CVE-2024-8736",
+            "title": "Simulated Vulnerability 407ba4bf",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "mixed",
+            "cvss_score": "7.9",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": false,
+            "patch_available": true,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:39:57.758943",
+            "updated_at": "2025-07-13T16:39:57.758943"
+          },
+          {
+            "id": "CVE-2024-4902",
+            "title": "Simulated Vulnerability ace61aba",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "low",
+            "cvss_score": "4.5",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": true,
+            "patch_available": true,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:35:41.968473",
+            "updated_at": "2025-07-13T16:35:41.968473"
+          },
+          {
+            "id": "CVE-2024-9830",
+            "title": "Simulated Vulnerability bc8da259",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "medium",
+            "cvss_score": "3.4",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": false,
+            "patch_available": false,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:35:41.959111",
+            "updated_at": "2025-07-13T16:35:41.959111"
+          },
+          {
+            "id": "CVE-2024-2324",
+            "title": "Simulated Vulnerability 40f9258d",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "mixed",
+            "cvss_score": "2.8",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": false,
+            "patch_available": false,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:44:21.925598",
+            "updated_at": "2025-07-13T16:44:21.925598"
+          },
+          {
+            "id": "CVE-2024-1967",
+            "title": "Simulated Vulnerability 7bef24fb",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "mixed",
+            "cvss_score": "1.9",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": false,
+            "patch_available": false,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:44:21.908195",
+            "updated_at": "2025-07-13T16:44:21.908195"
+          }
+        ],
+        "asset_inventory": {},
+        "scan_results": {
+          "total_vulnerabilities": 8,
+          "critical_vulnerabilities": 1,
+          "high_vulnerabilities": 1,
+          "medium_vulnerabilities": 1,
+          "low_vulnerabilities": 1,
+          "risk_score": 51,
+          "total_assets": 0,
+          "total_cves": 28,
+          "date_range": {
+            "start": "2025-07-06",
+            "end": "2025-07-13"
+          },
+          "generated_at": "2025-07-13T17:12:12.575778"
+        }
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 8,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 28,
+      "date_range": {
+        "start": "2025-07-06",
+        "end": "2025-07-13"
+      },
+      "generated_at": "2025-07-13T17:12:12.575778"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T17:12:13.731207",
+    "created_at": "2025-07-13T17:12:13.731534",
+    "updated_at": "2025-07-13T17:12:13.731534"
   }
 ]

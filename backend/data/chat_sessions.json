@@ -101,5 +101,24 @@
       "threat_level": "normal",
       "last_updated": "2025-07-13T14:30:32.752273"
     }
+  },
+  {
+    "id": "aa0b3aa8-e5a3-4053-96f6-30ba588b92c7",
+    "title": "SOC Chat - VULNERABILITY ANALYSIS",
+    "session_type": "vulnerability_analysis",
+    "created_at": "2025-07-13T17:11:41.971041",
+    "updated_at": "2025-07-13T17:12:01.758583",
+    "message_count": 2,
+    "last_message": "I'm happy to help you with that again! It seems you asked the same question, so I'll provide a brief...",
+    "status": "active",
+    "security_context": {
+      "session_type": "vulnerability_analysis",
+      "active_incidents": 0,
+      "critical_vulnerabilities": 1,
+      "threat_level": "normal",
+      "last_updated": "2025-07-13T17:11:41.969497",
+      "high_vulnerabilities": 1,
+      "vulnerability_analysis_mode": true
+    }
   }
 ]
