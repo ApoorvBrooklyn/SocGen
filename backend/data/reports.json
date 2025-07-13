@@ -1,0 +1,578 @@
+[
+  {
+    "id": "report-1",
+    "type": "executive",
+    "format": "json",
+    "summary": "Here is a concise executive summary based on the provided report data:\n\n**Executive Summary**\n\n**Security Posture:**\n\nOur latest security report, generated on July 13, 2025, indicates a strong security posture with no identified vulnerabilities across our assets. This includes zero critical, high, medium, and low vulnerabilities, resulting in a risk score of 0.\n\n**CVE Monitoring:**\n\nDuring the reporting period of July 6-13, 2025, we monitored 20 Common Vulnerabilities and Exposures (CVEs) with no associated vulnerabilities detected.\n\n**Recommendations:**\n\nWhile our current security posture is strong, it's essential to maintain vigilance and continue monitoring for potential threats. We recommend:\n\n* Regularly updating and patching systems to ensure continued protection against emerging threats\n* Maintaining a robust vulnerability management program to quickly identify and remediate any potential issues\n* Continuously monitoring CVEs and staying informed about the latest security advisories\n\nBy following these recommendations, we can ensure the ongoing security and integrity of our assets.",
+    "content": {
+      "title": "Executive Security Report",
+      "summary": "## Executive Summary\n\n**Overall Risk Score:** 0/100\n**Total Vulnerabilities:** 0\n**Critical Issues:** 0\n**High Priority Issues:** 0\n\n### Key Findings\n- 0 critical vulnerabilities require immediate attention\n- 0 high-priority issues need resolution within 30 days\n- Overall security posture: Good\n\n### Recommendations\n1. Prioritize critical vulnerability remediation\n2. Implement security awareness training\n3. Review and update security policies\n4. Consider additional security controls\n\n### Business Impact\n- Potential data breach risk: Low\n- Compliance status: Compliant\n- Recommended budget allocation for security improvements",
+      "charts": {
+        "vulnerability_distribution": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        },
+        "risk_trend": 0
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 0,
+      "critical_vulnerabilities": 0,
+      "high_vulnerabilities": 0,
+      "medium_vulnerabilities": 0,
+      "low_vulnerabilities": 0,
+      "risk_score": 0,
+      "total_assets": 0,
+      "total_cves": 20,
+      "date_range": {
+        "start": "2025-07-06",
+        "end": "2025-07-13"
+      },
+      "generated_at": "2025-07-13T16:24:01.943572"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:24:03.697374",
+    "created_at": "2025-07-13T16:24:03.697479",
+    "updated_at": "2025-07-13T16:24:03.697479"
+  },
+  {
+    "id": "report-2",
+    "type": "executive",
+    "format": "html",
+    "summary": "Here is a possible executive summary:\n\n**Executive Summary**\n\n**Security Report: June 13, 2025 - July 13, 2025**\n\nWe are pleased to report that our security assessment has identified zero vulnerabilities across our assets during the reporting period. This indicates a strong security posture and effective risk management practices.\n\n**Key Findings:**\n\n* No critical, high, medium, or low vulnerabilities were detected, resulting in a risk score of 0.\n* A total of 20 Common Vulnerabilities and Exposures (CVEs) were analyzed, with none posing a significant threat to our assets.\n\n**Recommendations:**\n\n* Continue to maintain our robust security controls and monitoring practices to ensure the integrity of our assets.\n* Perform regular security assessments to identify potential vulnerabilities and address them proactively.\n\nThis report demonstrates our commitment to prioritizing security and protecting our assets from potential threats. We will continue to monitor and improve our security posture to ensure the confidentiality, integrity, and availability of our systems and data.",
+    "content": {
+      "title": "Executive Security Report",
+      "summary": "## Executive Summary\n\n**Overall Risk Score:** 0/100\n**Total Vulnerabilities:** 0\n**Critical Issues:** 0\n**High Priority Issues:** 0\n\n### Key Findings\n- 0 critical vulnerabilities require immediate attention\n- 0 high-priority issues need resolution within 30 days\n- Overall security posture: Good\n\n### Recommendations\n1. Prioritize critical vulnerability remediation\n2. Implement security awareness training\n3. Review and update security policies\n4. Consider additional security controls\n\n### Business Impact\n- Potential data breach risk: Low\n- Compliance status: Compliant\n- Recommended budget allocation for security improvements",
+      "charts": {
+        "vulnerability_distribution": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        },
+        "risk_trend": 0
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 0,
+      "critical_vulnerabilities": 0,
+      "high_vulnerabilities": 0,
+      "medium_vulnerabilities": 0,
+      "low_vulnerabilities": 0,
+      "risk_score": 0,
+      "total_assets": 0,
+      "total_cves": 20,
+      "date_range": {
+        "start": "2025-06-13T16:25:16.394579",
+        "end": "2025-07-13T16:25:16.394645"
+      },
+      "generated_at": "2025-07-13T16:25:16.402917"
+    },
+    "recipients": [
+      "ciso@company.com",
+      "cto@company.com",
+      "ceo@company.com"
+    ],
+    "generated_at": "2025-07-13T16:25:17.544583",
+    "created_at": "2025-07-13T16:25:17.544692",
+    "updated_at": "2025-07-13T16:25:17.544692"
+  },
+  {
+    "id": "report-3",
+    "type": "custom-1752404611836",
+    "format": "json",
+    "summary": "Here is a concise executive summary for the custom security report:\n\n**Executive Summary**\n\nThe security report for the period of July 6, 2025, to July 13, 2025, indicates a clean bill of health for our assets. The scan did not identify any vulnerabilities, including critical, high, medium, or low-severity issues. Our risk score is zero, indicating a low risk posture.\n\nHowever, it is essential to note that 20 Common Vulnerabilities and Exposures (CVEs) were identified, which should be monitored and addressed promptly to prevent potential security risks.\n\n**Recommendations:**\n\n* Continue to maintain a robust vulnerability management program to ensure the identification and remediation of potential security risks.\n* Monitor the identified CVEs and apply necessary patches and updates to prevent exploitation.\n* Maintain regular security scans to ensure the security posture remains strong and identify any potential issues before they can be exploited.\n\nOverall, our security posture is strong, but continued vigilance is necessary to stay ahead of emerging threats.",
+    "content": {
+      "title": "Custom-1752404611836 Security Report",
+      "summary": "## Custom-1752404611836 Security Report\n\n**Generated:** 2025-07-13T16:33:31.843531\n**Risk Score:** 0/100\n**Total Vulnerabilities:** 0\n**Total Assets:** 0\n\n### Summary\nThis report provides a comprehensive overview of the current security posture.",
+      "data": {
+        "total_vulnerabilities": 0,
+        "critical_vulnerabilities": 0,
+        "high_vulnerabilities": 0,
+        "medium_vulnerabilities": 0,
+        "low_vulnerabilities": 0,
+        "risk_score": 0,
+        "total_assets": 0,
+        "total_cves": 20,
+        "date_range": {
+          "start": "2025-07-06",
+          "end": "2025-07-13"
+        },
+        "generated_at": "2025-07-13T16:33:31.843531"
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 0,
+      "critical_vulnerabilities": 0,
+      "high_vulnerabilities": 0,
+      "medium_vulnerabilities": 0,
+      "low_vulnerabilities": 0,
+      "risk_score": 0,
+      "total_assets": 0,
+      "total_cves": 20,
+      "date_range": {
+        "start": "2025-07-06",
+        "end": "2025-07-13"
+      },
+      "generated_at": "2025-07-13T16:33:31.843531"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:33:33.093600",
+    "created_at": "2025-07-13T16:33:33.093766",
+    "updated_at": "2025-07-13T16:33:33.093766"
+  },
+  {
+    "id": "report-4",
+    "type": "executive",
+    "format": "json",
+    "summary": "Here is a summary for an executive security report:\n\n**Executive Summary**\n\nThe security report for the period of January 1, 2024, to January 15, 2024, indicates a clean bill of health for our organization's assets. The key findings are:\n\n* **Zero vulnerabilities detected**: Our systems and assets are free from critical, high, medium, and low-severity vulnerabilities, ensuring a secure environment for our operations.\n* **No risk score**: Our risk score is zero, indicating that our organization is not exposed to any known security risks during the reporting period.\n* **20 CVEs monitored**: We continue to monitor 20 Common Vulnerabilities and Exposures (CVEs) to ensure our systems are protected from potential threats.\n\n**Recommendations**\n\n* Continue to maintain a robust vulnerability management program to ensure our systems and assets remain secure.\n* Stay vigilant and keep monitoring for emerging threats and CVEs to ensure our organization stays ahead of potential security risks.\n\nThis report demonstrates our organization's commitment to maintaining a secure environment, and we will continue to work diligently to ensure the confidentiality, integrity, and availability of our assets.",
+    "content": {
+      "title": "Executive Security Report",
+      "summary": "## Executive Summary\n\n**Overall Risk Score:** 0/100\n**Total Vulnerabilities:** 0\n**Critical Issues:** 0\n**High Priority Issues:** 0\n\n### Key Findings\n- 0 critical vulnerabilities require immediate attention\n- 0 high-priority issues need resolution within 30 days\n- Overall security posture: Good\n\n### Recommendations\n1. Prioritize critical vulnerability remediation\n2. Implement security awareness training\n3. Review and update security policies\n4. Consider additional security controls\n\n### Business Impact\n- Potential data breach risk: Low\n- Compliance status: Compliant\n- Recommended budget allocation for security improvements",
+      "charts": {
+        "vulnerability_distribution": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        },
+        "risk_trend": 0
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 0,
+      "critical_vulnerabilities": 0,
+      "high_vulnerabilities": 0,
+      "medium_vulnerabilities": 0,
+      "low_vulnerabilities": 0,
+      "risk_score": 0,
+      "total_assets": 0,
+      "total_cves": 20,
+      "date_range": {
+        "start": "2024-01-01",
+        "end": "2024-01-15"
+      },
+      "generated_at": "2025-07-13T16:34:44.160659"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:34:45.372846",
+    "created_at": "2025-07-13T16:34:45.373059",
+    "updated_at": "2025-07-13T16:34:45.373059"
+  },
+  {
+    "id": "report-5",
+    "type": "executive",
+    "format": "json",
+    "summary": "Here is a concise executive summary based on the provided report data:\n\n**Executive Summary**\n\nThis security report covers the period from January 1, 2024, to January 15, 2024. The key findings are:\n\n* **No vulnerabilities detected**: Our scan did not identify any critical, high, medium, or low vulnerabilities, indicating a robust security posture.\n* **Zero risk score**: The risk score is 0, suggesting that our assets are not exposed to significant threats.\n* **20 CVEs identified**: Although no vulnerabilities were detected, 20 Common Vulnerabilities and Exposures (CVEs) were identified, highlighting areas for continued monitoring and potential future mitigation.\n\n**Recommendations**:\n\n* Continue to maintain and enhance our security controls to ensure the integrity of our assets.\n* Regularly review and update our vulnerability management processes to stay ahead of emerging threats.\n* Monitor the identified CVEs for potential future exploitation and prioritize remediation efforts accordingly.\n\nOverall, this report indicates a strong security position, but it is essential to remain vigilant and proactive in our security efforts to minimize potential risks.",
+    "content": {
+      "title": "Executive Security Report",
+      "summary": "## Executive Summary\n\n**Overall Risk Score:** 0/100\n**Total Vulnerabilities:** 0\n**Critical Issues:** 0\n**High Priority Issues:** 0\n\n### Key Findings\n- 0 critical vulnerabilities require immediate attention\n- 0 high-priority issues need resolution within 30 days\n- Overall security posture: Good\n\n### Recommendations\n1. Prioritize critical vulnerability remediation\n2. Implement security awareness training\n3. Review and update security policies\n4. Consider additional security controls\n\n### Business Impact\n- Potential data breach risk: Low\n- Compliance status: Compliant\n- Recommended budget allocation for security improvements",
+      "charts": {
+        "vulnerability_distribution": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        },
+        "risk_trend": 0
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 0,
+      "critical_vulnerabilities": 0,
+      "high_vulnerabilities": 0,
+      "medium_vulnerabilities": 0,
+      "low_vulnerabilities": 0,
+      "risk_score": 0,
+      "total_assets": 0,
+      "total_cves": 20,
+      "date_range": {
+        "start": "2024-01-01",
+        "end": "2024-01-15"
+      },
+      "generated_at": "2025-07-13T16:34:57.011720"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:34:58.085313",
+    "created_at": "2025-07-13T16:34:58.085427",
+    "updated_at": "2025-07-13T16:34:58.085427"
+  },
+  {
+    "id": "report-6",
+    "type": "executive",
+    "format": "json",
+    "summary": "**Executive Security Report Summary**\n\n**Date Range:** January 1-15, 2024\n\n**Generated:** July 13, 2025\n\n**Key Findings:**\n\n* **Vulnerability Landscape:** 4 vulnerabilities were identified, with 1 critical, 1 high, 1 medium, and 1 low severity rating.\n* **Risk Score:** 51, indicating a moderate risk posture.\n* **CVEs:** 24 Common Vulnerabilities and Exposures (CVEs) were detected.\n\n**Recommendations:**\n\n* **Prioritize Remediation:** Focus on addressing the critical and high-severity vulnerabilities to mitigate potential threats.\n* **Enhance Asset Visibility:** Identify and incorporate assets into the vulnerability management process to ensure comprehensive security coverage.\n* **Continuously Monitor:** Regularly scan for vulnerabilities and CVEs to maintain a proactive security stance.\n\nThis summary provides a concise overview of the security report, highlighting the key findings and recommendations for executive-level stakeholders.",
+    "content": {
+      "title": "Executive Security Report",
+      "summary": "## Executive Summary\n\n**Overall Risk Score:** 51/100\n**Total Vulnerabilities:** 4\n**Critical Issues:** 1\n**High Priority Issues:** 1\n\n### Key Findings\n- 1 critical vulnerabilities require immediate attention\n- 1 high-priority issues need resolution within 30 days\n- Overall security posture: Moderate\n\n### Recommendations\n1. Prioritize critical vulnerability remediation\n2. Implement security awareness training\n3. Review and update security policies\n4. Consider additional security controls\n\n### Business Impact\n- Potential data breach risk: Medium\n- Compliance status: At Risk\n- Recommended budget allocation for security improvements",
+      "charts": {
+        "vulnerability_distribution": {
+          "critical": 1,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "risk_trend": 51
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 4,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 24,
+      "date_range": {
+        "start": "2024-01-01",
+        "end": "2024-01-15"
+      },
+      "generated_at": "2025-07-13T16:35:49.871463"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:35:50.921744",
+    "created_at": "2025-07-13T16:35:50.921815",
+    "updated_at": "2025-07-13T16:35:50.921815"
+  },
+  {
+    "id": "report-7",
+    "type": "technical",
+    "format": "json",
+    "summary": "Here is a concise executive summary based on the report data:\n\n**Executive Summary**\n\nThis technical security report highlights the vulnerabilities identified during the assessment period of January 1-15, 2024. The key findings are:\n\n* A total of 4 vulnerabilities were detected, with 1 critical, 1 high, 1 medium, and 1 low severity rating.\n* The overall risk score is 51, indicating a moderate level of risk.\n* 24 unique CVEs (Common Vulnerabilities and Exposures) were identified.\n\n**Recommendations**\n\nTo mitigate these vulnerabilities and reduce the risk score, we strongly recommend:\n\n* Immediate remediation of the critical vulnerability to prevent potential exploitation.\n* Prioritized patching and mitigation of high and medium severity vulnerabilities.\n* Implementation of compensating controls to address low severity vulnerabilities.\n* Ongoing vulnerability management and regular security assessments to ensure the security posture of the organization.\n\nBy addressing these findings and recommendations, the organization can significantly reduce its attack surface and improve its overall security posture.",
+    "content": {
+      "title": "Technical Security Report",
+      "summary": "## Technical Security Analysis\n\n### Vulnerability Analysis\n**Total Vulnerabilities:** 4\n**Average CVSS Score:** 6.5\n\n### Top Vulnerabilities\n- CVE-2024-9001: CVSS 9.7 - Simulated Vulnerability e24aee27\n- CVE-2024-6450: CVSS 8.4 - Simulated Vulnerability 3a14312e\n- CVE-2024-4902: CVSS 4.5 - Simulated Vulnerability ace61aba\n- CVE-2024-9830: CVSS 3.4 - Simulated Vulnerability bc8da259\n\n### Asset Inventory\n**Total Assets:** 0\n**Asset Distribution:**\n\n\n### Technical Recommendations\n1. Implement automated vulnerability scanning\n2. Establish patch management process\n3. Configure security monitoring tools\n4. Review network segmentation\n5. Implement access controls",
+      "details": {
+        "top_vulnerabilities": [
+          {
+            "id": "CVE-2024-9001",
+            "title": "Simulated Vulnerability e24aee27",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "critical",
+            "cvss_score": "9.7",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": true,
+            "patch_available": true,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:35:37.054205",
+            "updated_at": "2025-07-13T16:35:37.054205"
+          },
+          {
+            "id": "CVE-2024-6450",
+            "title": "Simulated Vulnerability 3a14312e",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "high",
+            "cvss_score": "8.4",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": false,
+            "patch_available": false,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:35:41.949580",
+            "updated_at": "2025-07-13T16:35:41.949580"
+          },
+          {
+            "id": "CVE-2024-4902",
+            "title": "Simulated Vulnerability ace61aba",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "low",
+            "cvss_score": "4.5",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": true,
+            "patch_available": true,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:35:41.968473",
+            "updated_at": "2025-07-13T16:35:41.968473"
+          },
+          {
+            "id": "CVE-2024-9830",
+            "title": "Simulated Vulnerability bc8da259",
+            "description": "This is a simulated vulnerability for testing purposes",
+            "severity": "medium",
+            "cvss_score": "3.4",
+            "published_date": "2024-01-15T10:30:00Z",
+            "affected_products": [
+              "Test Product 1.0",
+              "Test Service 2.1"
+            ],
+            "exploit_available": false,
+            "patch_available": false,
+            "source": "simulation",
+            "created_at": "2025-07-13T16:35:41.959111",
+            "updated_at": "2025-07-13T16:35:41.959111"
+          }
+        ],
+        "asset_inventory": {},
+        "scan_results": {
+          "total_vulnerabilities": 4,
+          "critical_vulnerabilities": 1,
+          "high_vulnerabilities": 1,
+          "medium_vulnerabilities": 1,
+          "low_vulnerabilities": 1,
+          "risk_score": 51,
+          "total_assets": 0,
+          "total_cves": 24,
+          "date_range": {
+            "start": "2024-01-01",
+            "end": "2024-01-15"
+          },
+          "generated_at": "2025-07-13T16:35:55.504595"
+        }
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 4,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 24,
+      "date_range": {
+        "start": "2024-01-01",
+        "end": "2024-01-15"
+      },
+      "generated_at": "2025-07-13T16:35:55.504595"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:35:56.637118",
+    "created_at": "2025-07-13T16:35:56.637164",
+    "updated_at": "2025-07-13T16:35:56.637164"
+  },
+  {
+    "id": "report-8",
+    "type": "compliance",
+    "format": "json",
+    "summary": "Here is a concise executive summary based on the provided report data:\n\n**Executive Summary**\n\nThis compliance security report covers the period from January 1, 2024, to January 15, 2024. The report highlights key findings and recommendations to mitigate identified vulnerabilities.\n\n**Key Findings:**\n\n* A total of 4 vulnerabilities were identified, including 1 critical, 1 high, 1 medium, and 1 low-severity vulnerability.\n* The overall risk score is 51, indicating a moderate level of risk.\n* 24 Common Vulnerabilities and Exposures (CVEs) were detected.\n\n**Recommendations:**\n\n* Prioritize remediation of the critical and high-severity vulnerabilities to minimize the risk of exploitation.\n* Implement a comprehensive vulnerability management program to identify and address vulnerabilities in a timely manner.\n* Conduct regular security assessments to ensure the risk score is trending downward.\n\nBy addressing these findings and recommendations, the organization can reduce its risk profile and improve its overall security posture.",
+    "content": {
+      "title": "Compliance Security Report",
+      "summary": "## Compliance Status Report\n\n### Overall Compliance Score: 49%\n\n### Compliance Areas\n- **Vulnerability Management:** Non-Compliant\n- **Asset Management:** Non-Compliant\n- **Risk Assessment:** Needs Review\n\n### Regulatory Requirements\n- **Critical Vulnerabilities:** Must be remediated within 30 days\n- **High Vulnerabilities:** Must be remediated within 90 days\n- **Asset Inventory:** Must be maintained and updated\n\n### Recommendations\n1. Address critical vulnerabilities immediately\n2. Implement regular vulnerability assessments\n3. Maintain asset inventory\n4. Document remediation efforts",
+      "compliance_matrix": {
+        "vulnerability_management": false,
+        "asset_management": false,
+        "risk_assessment": false
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 4,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 24,
+      "date_range": {
+        "start": "2024-01-01",
+        "end": "2024-01-15"
+      },
+      "generated_at": "2025-07-13T16:36:00.298092"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:36:01.327600",
+    "created_at": "2025-07-13T16:36:01.327739",
+    "updated_at": "2025-07-13T16:36:01.327739"
+  },
+  {
+    "id": "report-9",
+    "type": "executive",
+    "format": "html",
+    "summary": "Here is a concise executive summary based on the report data:\n\n**Executive Summary**\n\nThe security report, generated on July 13, 2025, highlights key findings and recommendations for improving our organization's security posture. \n\n**Key Findings:**\n\n* A total of 4 vulnerabilities were identified, including 1 critical, 1 high, 1 medium, and 1 low-severity issue.\n* The risk score is 51, indicating a moderate level of risk.\n* 24 Common Vulnerabilities and Exposures (CVEs) were detected during the assessment period from June 13 to July 13, 2025.\n\n**Recommendations:**\n\n* Immediately address the critical vulnerability to prevent potential attacks.\n* Prioritize remediation of high and medium-severity vulnerabilities to reduce the risk score.\n* Implement a vulnerability management program to regularly identify and address CVEs.\n* Conduct regular security assessments to maintain visibility into our organization's security posture.\n\nBy addressing these findings and implementing these recommendations, we can improve our organization's overall security and reduce the risk of attacks.",
+    "content": {
+      "title": "Executive Security Report",
+      "summary": "## Executive Summary\n\n**Overall Risk Score:** 51/100\n**Total Vulnerabilities:** 4\n**Critical Issues:** 1\n**High Priority Issues:** 1\n\n### Key Findings\n- 1 critical vulnerabilities require immediate attention\n- 1 high-priority issues need resolution within 30 days\n- Overall security posture: Moderate\n\n### Recommendations\n1. Prioritize critical vulnerability remediation\n2. Implement security awareness training\n3. Review and update security policies\n4. Consider additional security controls\n\n### Business Impact\n- Potential data breach risk: Medium\n- Compliance status: At Risk\n- Recommended budget allocation for security improvements",
+      "charts": {
+        "vulnerability_distribution": {
+          "critical": 1,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "risk_trend": 51
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 4,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 24,
+      "date_range": {
+        "start": "2025-06-13T16:36:08.372124",
+        "end": "2025-07-13T16:36:08.372136"
+      },
+      "generated_at": "2025-07-13T16:36:08.373150"
+    },
+    "recipients": [
+      "test@example.com"
+    ],
+    "generated_at": "2025-07-13T16:36:09.356741",
+    "created_at": "2025-07-13T16:36:09.356835",
+    "updated_at": "2025-07-13T16:36:09.356835"
+  },
+  {
+    "id": "report-10",
+    "type": "executive",
+    "format": "json",
+    "summary": "Here is a concise executive summary based on the provided report data:\n\n**Executive Summary**\n\n**Security Risk Report (July 6-13, 2025)**\n\nOur latest security risk assessment has identified 4 vulnerabilities across our systems, posing a moderate risk to our organization. The key findings are:\n\n* 1 critical vulnerability that requires immediate attention\n* 1 high-severity vulnerability that needs prompt remediation\n* 1 medium-severity vulnerability that should be addressed soon\n* 1 low-severity vulnerability that can be addressed in the near future\n\nOur risk score stands at 51, indicating a moderate level of risk. We have identified 24 CVEs (Common Vulnerabilities and Exposures) during this period.\n\n**Recommendations:**\n\n1. **Prioritize remediation** of the critical and high-severity vulnerabilities to prevent potential security breaches.\n2. **Implement mitigation measures** to reduce the risk posed by medium-severity vulnerabilities.\n3. **Continuously monitor** our systems for new vulnerabilities and CVEs to ensure proactive risk management.\n4. **Enhance security controls** to prevent similar vulnerabilities from arising in the future.\n\nBy addressing these vulnerabilities and implementing these recommendations, we can reduce our risk score and protect our organization from potential security threats.\n\n**",
+    "content": {
+      "title": "Executive Security Report",
+      "summary": "## Executive Summary\n\n**Overall Risk Score:** 51/100\n**Total Vulnerabilities:** 4\n**Critical Issues:** 1\n**High Priority Issues:** 1\n\n### Key Findings\n- 1 critical vulnerabilities require immediate attention\n- 1 high-priority issues need resolution within 30 days\n- Overall security posture: Moderate\n\n### Recommendations\n1. Prioritize critical vulnerability remediation\n2. Implement security awareness training\n3. Review and update security policies\n4. Consider additional security controls\n\n### Business Impact\n- Potential data breach risk: Medium\n- Compliance status: At Risk\n- Recommended budget allocation for security improvements",
+      "charts": {
+        "vulnerability_distribution": {
+          "critical": 1,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "risk_trend": 51
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 4,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 24,
+      "date_range": {
+        "start": "2025-07-06",
+        "end": "2025-07-13"
+      },
+      "generated_at": "2025-07-13T16:37:13.310072"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:37:14.621020",
+    "created_at": "2025-07-13T16:37:14.621433",
+    "updated_at": "2025-07-13T16:37:14.621433"
+  },
+  {
+    "id": "report-11",
+    "type": "executive",
+    "format": "json",
+    "summary": "Here is a concise executive summary based on the provided report data:\n\n**Executive Summary**\n\nThis security report provides an overview of our organization's vulnerability posture from January 1, 2024, to January 15, 2024. The key findings are:\n\n* **Risk Score:** 51, indicating a moderate level of risk exposure.\n* **Vulnerability Breakdown:** 4 total vulnerabilities were identified, comprising 1 critical, 1 high, 1 medium, and 1 low-severity vulnerability.\n* **CVEs:** A total of 24 Common Vulnerabilities and Exposures (CVEs) were detected.\n\n**Recommendations:**\n\n1. **Prioritize Remediation:** Immediately address the critical and high-severity vulnerabilities to mitigate potential attacks and reduce the risk score.\n2. **Vulnerability Management:** Implement a proactive vulnerability management program to identify and remediate vulnerabilities in a timely manner.\n3. **Enhance Asset Visibility:** Implement asset discovery and inventory management to gain visibility into our organization's total assets.\n\nBy taking these recommendations seriously and taking prompt action, we can reduce our risk exposure and protect our organization from potential security threats.",
+    "content": {
+      "title": "Executive Security Report",
+      "summary": "## Executive Summary\n\n**Overall Risk Score:** 51/100\n**Total Vulnerabilities:** 4\n**Critical Issues:** 1\n**High Priority Issues:** 1\n\n### Key Findings\n- 1 critical vulnerabilities require immediate attention\n- 1 high-priority issues need resolution within 30 days\n- Overall security posture: Moderate\n\n### Recommendations\n1. Prioritize critical vulnerability remediation\n2. Implement security awareness training\n3. Review and update security policies\n4. Consider additional security controls\n\n### Business Impact\n- Potential data breach risk: Medium\n- Compliance status: At Risk\n- Recommended budget allocation for security improvements",
+      "charts": {
+        "vulnerability_distribution": {
+          "critical": 1,
+          "high": 1,
+          "medium": 1,
+          "low": 1
+        },
+        "risk_trend": 51
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 4,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 24,
+      "date_range": {
+        "start": "2024-01-01",
+        "end": "2024-01-15"
+      },
+      "generated_at": "2025-07-13T16:39:10.571795"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:39:11.639064",
+    "created_at": "2025-07-13T16:39:11.639332",
+    "updated_at": "2025-07-13T16:39:11.639332"
+  },
+  {
+    "id": "report-12",
+    "type": "compliance",
+    "format": "json",
+    "summary": "Here is a summary for the compliance security report:\n\n**Executive Summary**\n\nThis compliance security report covers the period from July 6, 2025, to July 13, 2025. The report highlights key findings and recommendations to improve the organization's security posture.\n\n**Key Findings:**\n\n* A total of 8 vulnerabilities were identified, with 1 critical, 1 high, 1 medium, and 1 low severity vulnerability.\n* The risk score is 51, indicating a moderate level of risk.\n* A total of 28 Common Vulnerabilities and Exposures (CVEs) were detected.\n\n**Recommendations:**\n\n* Immediate attention is required to address the critical vulnerability to prevent potential security breaches.\n* Prioritize remediation of high and medium severity vulnerabilities to reduce the risk score.\n* Implement a vulnerability management program to regularly scan and remediate vulnerabilities.\n* Conduct a thorough asset inventory to identify and include all assets in future scans.\n\nBy addressing these findings and implementing the recommended remediation actions, the organization can improve its security posture and reduce the risk of security breaches.",
+    "content": {
+      "title": "Compliance Security Report",
+      "summary": "## Compliance Status Report\n\n### Overall Compliance Score: 49%\n\n### Compliance Areas\n- **Vulnerability Management:** Non-Compliant\n- **Asset Management:** Non-Compliant\n- **Risk Assessment:** Needs Review\n\n### Regulatory Requirements\n- **Critical Vulnerabilities:** Must be remediated within 30 days\n- **High Vulnerabilities:** Must be remediated within 90 days\n- **Asset Inventory:** Must be maintained and updated\n\n### Recommendations\n1. Address critical vulnerabilities immediately\n2. Implement regular vulnerability assessments\n3. Maintain asset inventory\n4. Document remediation efforts",
+      "compliance_matrix": {
+        "vulnerability_management": false,
+        "asset_management": false,
+        "risk_assessment": false
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 8,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 28,
+      "date_range": {
+        "start": "2025-07-06",
+        "end": "2025-07-13"
+      },
+      "generated_at": "2025-07-13T16:52:35.572811"
+    },
+    "recipients": [],
+    "generated_at": "2025-07-13T16:52:36.705058",
+    "created_at": "2025-07-13T16:52:36.705240",
+    "updated_at": "2025-07-13T16:52:36.705240"
+  },
+  {
+    "id": "report-13",
+    "type": "compliance",
+    "format": "html",
+    "summary": "Here is a summary for the compliance security report:\n\n**Executive Summary**\n\nThis compliance security report covers the period from June 13, 2025, to July 13, 2025. Our scan identified 8 vulnerabilities, including 1 critical, 1 high, 1 medium, and 1 low severity vulnerability. The overall risk score is 51, indicating a moderate level of risk.\n\n**Key Findings:**\n\n* 1 critical vulnerability requires immediate attention to prevent potential breaches.\n* A total of 28 CVEs (Common Vulnerabilities and Exposures) were detected, highlighting the need for timely patching and software updates.\n* No assets were identified during the scan, suggesting that asset discovery and management processes may need improvement.\n\n**Recommendations:**\n\n* Prioritize remediation of the critical vulnerability to mitigate potential security risks.\n* Implement a robust patch management process to address the 28 identified CVEs.\n* Enhance asset discovery and management processes to ensure comprehensive security coverage.\n* Continuously monitor and assess the security posture to reduce the risk score and prevent potential security breaches.\n\nBy addressing these findings and recommendations, we can improve the overall security posture and reduce the risk of security breaches.",
+    "content": {
+      "title": "Compliance Security Report",
+      "summary": "## Compliance Status Report\n\n### Overall Compliance Score: 49%\n\n### Compliance Areas\n- **Vulnerability Management:** Non-Compliant\n- **Asset Management:** Non-Compliant\n- **Risk Assessment:** Needs Review\n\n### Regulatory Requirements\n- **Critical Vulnerabilities:** Must be remediated within 30 days\n- **High Vulnerabilities:** Must be remediated within 90 days\n- **Asset Inventory:** Must be maintained and updated\n\n### Recommendations\n1. Address critical vulnerabilities immediately\n2. Implement regular vulnerability assessments\n3. Maintain asset inventory\n4. Document remediation efforts",
+      "compliance_matrix": {
+        "vulnerability_management": false,
+        "asset_management": false,
+        "risk_assessment": false
+      }
+    },
+    "data": {
+      "total_vulnerabilities": 8,
+      "critical_vulnerabilities": 1,
+      "high_vulnerabilities": 1,
+      "medium_vulnerabilities": 1,
+      "low_vulnerabilities": 1,
+      "risk_score": 51,
+      "total_assets": 0,
+      "total_cves": 28,
+      "date_range": {
+        "start": "2025-06-13T16:52:39.884980",
+        "end": "2025-07-13T16:52:39.885000"
+      },
+      "generated_at": "2025-07-13T16:52:39.888684"
+    },
+    "recipients": [
+      "compliance@company.com",
+      "legal@company.com"
+    ],
+    "generated_at": "2025-07-13T16:52:41.000078",
+    "created_at": "2025-07-13T16:52:41.000405",
+    "updated_at": "2025-07-13T16:52:41.000405"
+  }
+]

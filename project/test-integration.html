@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Platform Integration Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1f2937;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            background-color: #374151;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .success { color: #10b981; }
+        .error { color: #ef4444; }
+        .warning { color: #f59e0b; }
+        button {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #2563eb;
+        }
+        pre {
+            background-color: #1f2937;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Security Platform Integration Test</h1>
+        
+        <div class="test-section">
+            <h2>Backend Health Check</h2>
+            <button onclick="testHealth()">Test Health</button>
+            <div id="health-result"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>LLM Service Status</h2>
+            <button onclick="testLLM()">Test LLM</button>
+            <div id="llm-result"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>CVE API Test</h2>
+            <button onclick="testCVE()">Test CVE API</button>
+            <div id="cve-result"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>Simulation API Test</h2>
+            <button onclick="testSimulation()">Test Simulation</button>
+            <div id="simulation-result"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>Chat API Test</h2>
+            <button onclick="testChat()">Test Chat</button>
+            <div id="chat-result"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000/api/v1';
+
+        async function makeRequest(endpoint, options = {}) {
+            try {
+                const response = await fetch(`${API_BASE}${endpoint}`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        ...options.headers,
+                    },
+                    ...options,
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                return await response.json();
+            } catch (error) {
+                throw error;
+            }
+        }
+
+        async function testHealth() {
+            const resultDiv = document.getElementById('health-result');
+            resultDiv.innerHTML = '<p>Testing...</p>';
+            
+            try {
+                const response = await makeRequest('/health');
+                resultDiv.innerHTML = `
+                    <p class="success">✅ Health check successful!</p>
+                    <pre>${JSON.stringify(response, null, 2)}</pre>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">❌ Health check failed: ${error.message}</p>
+                `;
+            }
+        }
+
+        async function testLLM() {
+            const resultDiv = document.getElementById('llm-result');
+            resultDiv.innerHTML = '<p>Testing...</p>';
+            
+            try {
+                const response = await makeRequest('/llm/status');
+                resultDiv.innerHTML = `
+                    <p class="success">✅ LLM status retrieved!</p>
+                    <pre>${JSON.stringify(response, null, 2)}</pre>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">❌ LLM test failed: ${error.message}</p>
+                `;
+            }
+        }
+
+        async function testCVE() {
+            const resultDiv = document.getElementById('cve-result');
+            resultDiv.innerHTML = '<p>Testing...</p>';
+            
+            try {
+                const response = await makeRequest('/cve/');
+                resultDiv.innerHTML = `
+                    <p class="success">✅ CVE API working!</p>
+                    <pre>${JSON.stringify(response, null, 2)}</pre>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">❌ CVE test failed: ${error.message}</p>
+                `;
+            }
+        }
+
+        async function testSimulation() {
+            const resultDiv = document.getElementById('simulation-result');
+            resultDiv.innerHTML = '<p>Testing...</p>';
+            
+            try {
+                const response = await makeRequest('/simulation/cve', {
+                    method: 'POST',
+                    body: JSON.stringify({ count: 2, severity: 'high' }),
+                });
+                resultDiv.innerHTML = `
+                    <p class="success">✅ Simulation API working!</p>
+                    <pre>${JSON.stringify(response, null, 2)}</pre>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">❌ Simulation test failed: ${error.message}</p>
+                `;
+            }
+        }
+
+        async function testChat() {
+            const resultDiv = document.getElementById('chat-result');
+            resultDiv.innerHTML = '<p>Testing...</p>';
+            
+            try {
+                // First create a session
+                const sessionResponse = await makeRequest('/chat/sessions', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        title: 'Test Session',
+                        description: 'Integration test session'
+                    }),
+                });
+                
+                if (sessionResponse && sessionResponse.id) {
+                    // Then send a message
+                    const messageResponse = await makeRequest('/chat/messages', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            session_id: sessionResponse.id,
+                            message: 'Hello, this is a test message!'
+                        }),
+                    });
+                    
+                    resultDiv.innerHTML = `
+                        <p class="success">✅ Chat API working!</p>
+                        <p>Session created: ${sessionResponse.id}</p>
+                        <pre>${JSON.stringify(messageResponse, null, 2)}</pre>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <p class="warning">⚠️ Chat session created but no ID returned</p>
+                        <pre>${JSON.stringify(sessionResponse, null, 2)}</pre>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">❌ Chat test failed: ${error.message}</p>
+                `;
+            }
+        }
+
+        // Auto-run health check on page load
+        window.onload = function() {
+            testHealth();
+        };
+    </script>
+</body>
+</html> 

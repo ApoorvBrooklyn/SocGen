@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, AlertTriangle, CheckCircle, Clock, Users, Server, MessageCircle, FileText, Settings, Bell } from 'lucide-react';
+import { Shield, AlertTriangle, CheckCircle, Clock, Users, Server, MessageCircle, FileText, Settings, Bell, Bug, Zap } from 'lucide-react';
 import Dashboard from './components/Dashboard';
 import CVEAnalysis from './components/CVEAnalysis';
 import PatchRecommendations from './components/PatchRecommendations';
@@ -7,8 +7,9 @@ import RiskPrioritization from './components/RiskPrioritization';
 import TicketManagement from './components/TicketManagement';
 import ChatAssistant from './components/ChatAssistant';
 import Reports from './components/Reports';
-import AssetInventory from './components/AssetInventory';
 import VulnerabilityScanner from './components/VulnerabilityScanner';
+import VulnerabilityTester from './components/VulnerabilityTester';
+import VulnerabilitySolutions from './components/VulnerabilitySolutions';
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -17,10 +18,11 @@ function App() {
     { id: 'dashboard', label: 'Dashboard', icon: Shield },
     { id: 'cve-analysis', label: 'CVE Analysis', icon: AlertTriangle },
     { id: 'vulnerability-scanner', label: 'Vulnerability Scanner', icon: Settings },
+    { id: 'vulnerability-tester', label: 'Vulnerability Tester', icon: Bug },
+    { id: 'vulnerability-solutions', label: 'Solutions', icon: Zap },
     { id: 'risk-prioritization', label: 'Risk Priority', icon: Clock },
     { id: 'patch-recommendations', label: 'Patch Recommendations', icon: CheckCircle },
     { id: 'ticket-management', label: 'Tickets', icon: FileText },
-    { id: 'asset-inventory', label: 'Assets', icon: Server },
     { id: 'chat-assistant', label: 'AI Assistant', icon: MessageCircle },
     { id: 'reports', label: 'Reports', icon: FileText },
   ];
@@ -33,14 +35,16 @@ function App() {
         return <CVEAnalysis />;
       case 'vulnerability-scanner':
         return <VulnerabilityScanner />;
+      case 'vulnerability-tester':
+        return <VulnerabilityTester />;
+      case 'vulnerability-solutions':
+        return <VulnerabilitySolutions />;
       case 'risk-prioritization':
         return <RiskPrioritization />;
       case 'patch-recommendations':
         return <PatchRecommendations />;
       case 'ticket-management':
         return <TicketManagement />;
-      case 'asset-inventory':
-        return <AssetInventory />;
       case 'chat-assistant':
         return <ChatAssistant />;
       case 'reports':

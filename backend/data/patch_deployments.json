@@ -1,0 +1,73 @@
+[
+  {
+    "id": "patch_001",
+    "cve_id": "CVE-2025-7079",
+    "os_type": "Ubuntu",
+    "status": "pending",
+    "recommendations": "Apply security patch for JWT token handler vulnerability",
+    "patch_commands": [
+      "sudo apt update",
+      "sudo apt install --only-upgrade bluebell-plus",
+      "sudo systemctl restart bluebell-service"
+    ],
+    "manual_steps": [
+      "1. Update bluebell-plus package",
+      "2. Restart affected services",
+      "3. Verify JWT token functionality",
+      "4. Test authentication flow"
+    ],
+    "timestamp": 1752406020.254315,
+    "priority": "high",
+    "estimated_downtime": "5 minutes",
+    "created_at": "2025-07-13T16:57:00.257616",
+    "updated_at": "2025-07-13T16:57:00.257616"
+  },
+  {
+    "id": "patch_002",
+    "cve_id": "CVE-2025-7080",
+    "os_type": "CentOS",
+    "status": "completed",
+    "recommendations": "Update SSL/TLS configuration to fix weak cipher suites",
+    "patch_commands": [
+      "sudo yum update openssl",
+      "sudo yum update nginx",
+      "sudo systemctl reload nginx"
+    ],
+    "manual_steps": [
+      "1. Update OpenSSL package",
+      "2. Configure strong cipher suites",
+      "3. Test SSL/TLS connections",
+      "4. Verify security headers"
+    ],
+    "timestamp": 1752402420.254316,
+    "priority": "medium",
+    "estimated_downtime": "2 minutes",
+    "deployed_at": "2025-07-13T15:57:00.254317",
+    "created_at": "2025-07-13T16:57:00.257965",
+    "updated_at": "2025-07-13T16:57:00.257965"
+  },
+  {
+    "id": "patch_003",
+    "cve_id": "CVE-2025-7081",
+    "os_type": "Debian",
+    "status": "in_progress",
+    "recommendations": "Fix SQL injection vulnerability in web application",
+    "patch_commands": [
+      "sudo apt update",
+      "sudo apt install --only-upgrade webapp-package",
+      "sudo systemctl restart webapp"
+    ],
+    "manual_steps": [
+      "1. Update web application package",
+      "2. Apply database schema changes",
+      "3. Test database queries",
+      "4. Verify application functionality"
+    ],
+    "timestamp": 1752404220.254326,
+    "priority": "critical",
+    "estimated_downtime": "10 minutes",
+    "started_at": "2025-07-13T16:27:00.254326",
+    "created_at": "2025-07-13T16:57:00.258100",
+    "updated_at": "2025-07-13T16:57:00.258100"
+  }
+]

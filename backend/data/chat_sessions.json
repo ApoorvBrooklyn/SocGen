@@ -1,0 +1,105 @@
+[
+  {
+    "id": "9b82c4f3-f636-41b3-a756-3ec93a73a689",
+    "title": "SOC Chat - GENERAL",
+    "session_type": "general",
+    "created_at": "2025-07-13T14:11:34.519067",
+    "updated_at": "2025-07-13T14:15:11.503601",
+    "message_count": 4,
+    "last_message": "Based on the CVE analysis:\n\n1. Exploit Method: This vulnerability can be exploited through network-b...",
+    "security_context": {
+      "session_type": "general",
+      "active_incidents": 0,
+      "critical_vulnerabilities": 0,
+      "threat_level": "normal"
+    }
+  },
+  {
+    "id": "df8310fe-0b99-4cc1-859a-b9396557492e",
+    "title": "SOC Chat - GENERAL",
+    "session_type": "general",
+    "created_at": "2025-07-13T14:24:36.288059",
+    "updated_at": "2025-07-13T14:24:36.288059",
+    "message_count": 0,
+    "last_message": null,
+    "status": "active",
+    "security_context": {
+      "session_type": "general",
+      "active_incidents": 0,
+      "critical_vulnerabilities": 0,
+      "threat_level": "normal",
+      "last_updated": "2025-07-13T14:24:36.282996"
+    }
+  },
+  {
+    "id": "061039c6-46ab-41c4-9e47-cd1db707ae47",
+    "title": "SOC Chat - General",
+    "session_type": "general",
+    "created_at": "2025-07-13T14:25:40.665817",
+    "updated_at": "2025-07-13T14:25:51.426739",
+    "message_count": 2,
+    "last_message": "I remember we just started our conversation, and I'm happy to help you with cybersecurity. Since we ...",
+    "status": "active",
+    "security_context": {
+      "session_type": "general",
+      "active_incidents": 0,
+      "critical_vulnerabilities": 0,
+      "threat_level": "normal",
+      "last_updated": "2025-07-13T14:25:40.665406"
+    }
+  },
+  {
+    "id": "44be11af-f4c1-483d-857b-9e00e1863243",
+    "title": "SOC Chat - GENERAL",
+    "session_type": "general",
+    "created_at": "2025-07-13T14:26:02.788370",
+    "updated_at": "2025-07-13T14:26:02.788370",
+    "message_count": 0,
+    "last_message": null,
+    "status": "active",
+    "security_context": {
+      "session_type": "general",
+      "active_incidents": 0,
+      "critical_vulnerabilities": 0,
+      "threat_level": "normal",
+      "last_updated": "2025-07-13T14:26:02.787647"
+    }
+  },
+  {
+    "id": "6e327591-1fcb-44dd-922e-8b976a492dbe",
+    "title": "SOC Chat - THREAT HUNTING",
+    "session_type": "threat_hunting",
+    "created_at": "2025-07-13T14:26:53.675002",
+    "updated_at": "2025-07-13T14:28:33.113419",
+    "message_count": 4,
+    "last_message": "DDOS (Distributed Denial of Service) is a crucial topic in cybersecurity. In simple terms, a DDOS at...",
+    "status": "active",
+    "security_context": {
+      "session_type": "threat_hunting",
+      "active_incidents": 0,
+      "critical_vulnerabilities": 0,
+      "threat_level": "normal",
+      "last_updated": "2025-07-13T14:26:53.674073",
+      "threat_hunting_mode": true,
+      "proactive_monitoring": true,
+      "ioc_tracking": true
+    }
+  },
+  {
+    "id": "b17dfbfd-918c-4976-b790-867a426170b9",
+    "title": "SOC Chat - GENERAL",
+    "session_type": "general",
+    "created_at": "2025-07-13T14:30:32.752857",
+    "updated_at": "2025-07-13T14:30:38.648715",
+    "message_count": 2,
+    "last_message": "I'm happy to help you again! Since we've already discussed this topic earlier, I'll provide a brief ...",
+    "status": "active",
+    "security_context": {
+      "session_type": "general",
+      "active_incidents": 0,
+      "critical_vulnerabilities": 0,
+      "threat_level": "normal",
+      "last_updated": "2025-07-13T14:30:32.752273"
+    }
+  }
+]
